@@ -1,0 +1,7 @@
+v 4
+file . "testbench_porta_and.vhdl" "3603d47e3fca367b30a6cb89f6b9b9b601f7b7b3" "20261007131911.520":
+  entity testbench_porta_and at 1( 0) + 0 on 15;
+  architecture test of testbench_porta_and at 8( 169) + 0 on 16;
+file . "porta_and.vhdl" "cf4920e134d9f710e3e566332f949621d71567d1" "20261007131918.920":
+  entity porta_and at 1( 0) + 0 on 17;
+  architecture arch_porta_and of porta_and at 12( 159) + 0 on 18;

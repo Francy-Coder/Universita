@@ -67,4 +67,4 @@ rm -r
 
 man <comando> (manual)
 - per capire cosa fa un comando
-
+- "q" per uscire

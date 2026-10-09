@@ -70,3 +70,36 @@ man <comando> (manual)
 - per capire cosa fa un comando
 - "q" per uscire
 
+---
+
+Comandi Go
+go fmt
+- automaticamente formatta il codice all'interno di un singolo file. produrre un file la cui identazione è appropiata
+
+go run
+- prende in ingresso un attributo, lo script (programm.go). Esegue il programma Go
+
+go build
+- compila il nostro programma Go
+
+go doc / go help
+- documentazione di uno specifico comando
+
+--
+librearia fmt
+- package interno che ho quando faccio go mod init. Esistono anche package interni
+- quando faccio main.go ricevo diversi package interni
+
+main.go
+- Crea un file go
+
+go mod init <nome_cartella>
+- Crea un modulo go
+- Tiene traccia librerie esterne
+- Permette di compilare il codice in qualsiasi cartella del computer
+
+go build -o <nome_file_eseguibile>
+- Crea l'eseguibile
+
+./<nome_file_eseguibile>
+

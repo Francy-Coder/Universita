@@ -10,4 +10,61 @@ La usiamo per svolgere i nostri programmi
 Il File System è la composizione del sistema opearativo per gestire i file
 - Gerarchia ad albero
 
-pwd (print working directory), ti dice dove ti trovi
+Comandi utili:
+pwd (print working directory), ti dice dove ti trovi (nel terminale bash)
+
+cd (change directory)
+- cd . --> muoviti nella directory corrente, cioè non muoverti
+- cd .. --> torna alla directory precedente
+- cd [nome_directory] --> per accedere ad una directory (attenzione alla gerarchia)
+  - Patto assoluto, inzia sempre con uno slash. Uno relativo no.
+    - PR: cd home/utenenti.unimi.it/nomeUtente/cartella   
+    - PA: cd /home/utenti.unimi.it/nomeUtente/cartella
+- cd / --> per andare in root ("/") (Anche chiamato patto assoluto)
+- Cercare di evitare di mettere cartelle e file con spazi, se c'è bisogno si usa '' per selezionare il file oppure evitare e mettere nomeFile || nome_file
+
+mv (move)
+- Per spostare i file
+
+ls (list)
+- Ci fa vedere tutte le cartelle e i file presenti all'interno della cartella in cui sei dentro
+
+touch
+- Crea un file, dove dopo dobbiamo definire il tipo
+  - es: file.txt
+
+cp (copy)
+- cp <percorso file> <percorso file copia>
+- Copia un file in una directory
+
+rm (remove)
+- rimuove un file
+
+cat
+- stampa a schermo il contenuto del file di testo
+
+more
+- stessa cosa di cat, ma è consigliato usarlo per i file lunghi visto che stampa tot alla volta
+
+./
+- se il file è un file eseguibile uso "./" per eseguire il file
+
+pluma (editor di testo)
+- per aprire il file in un editor di testo
+- finche pluma è aperto non posso utilizzare il terminale, si freeza. Per evitare si puo aprire il file in background tramite "pluma <nome file> &"
+
+mkdir 
+- crea una directory
+
+mv
+- sposta un direcotory
+
+cp -r 
+- copia una directory
+
+rm -r
+- rimuove una directory
+
+man <comando> (manual)
+- per capire cosa fa un comando
+

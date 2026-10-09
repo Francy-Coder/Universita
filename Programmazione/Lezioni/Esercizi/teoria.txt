@@ -1,0 +1,13 @@
+# Shell Linux
+Permette l'interazione tra l'utente e il sistema operativo
+
+La shell piu comune su Linux si chiama Bash
+
+La usiamo per svolgere i nostri programmi
+
+---
+
+Il File System è la composizione del sistema opearativo per gestire i file
+- Gerarchia ad albero
+
+pwd (print working directory), ti dice dove ti trovi

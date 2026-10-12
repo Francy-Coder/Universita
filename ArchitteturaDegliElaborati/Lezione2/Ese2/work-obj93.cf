@@ -1,0 +1,7 @@
+v 4
+file . "tb_ha.vhdl" "1fc87825d1534fc7c8b1fb694f628f582674341d" "20261012120112.640":
+  entity tb_ha at 1( 0) + 0 on 13;
+  architecture arch_tb of tb_ha at 8( 141) + 0 on 14;
+file . "half_adder.vhdl" "6154ed1b334c1ff8c73a6093209caea3e1ee2ecb" "20261012115330.715":
+  entity half_adder at 1( 0) + 0 on 11;
+  architecture arch of half_adder at 9( 140) + 0 on 12;

@@ -1,0 +1,7 @@
+v 4
+file . "signals.vhdl" "9c67eb4b456eba7e44f850acb9eaf80ef93ce280" "20261012131051.257":
+  entity signals at 1( 0) + 0 on 15;
+  architecture arch_signals of signals at 12( 197) + 0 on 16;
+file . "tb_signals.vhdl" "f1d9660893c9dbb5cef8b4ee24ae1002fe35389d" "20261012131100.201":
+  entity tb_signals at 1( 0) + 0 on 17;
+  architecture arch_tb of tb_signals at 8( 151) + 0 on 18;

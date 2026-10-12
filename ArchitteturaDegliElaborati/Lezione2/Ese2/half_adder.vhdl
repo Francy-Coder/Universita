@@ -10,4 +10,4 @@ architecture arch of half_adder is
 begin
 	S <= A xor B;
 	R <= A and B;
-end architecture arch;
+end architecture;

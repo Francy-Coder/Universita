@@ -1,0 +1,7 @@
+v 4
+file . "tb_allarme.vhdl" "5538555580384b37049437d663d137c9412854aa" "20261021185247.565":
+  entity tb_allarme at 1( 0) + 0 on 13;
+  architecture arch_tb of tb_allarme at 8( 151) + 0 on 14;
+file . "allarme.vhdl" "e2efa14bcad3b2eebf2b3116915ceded3a8f0a09" "20261021185243.726":
+  entity allarme_casolingo at 1( 0) + 0 on 11;
+  architecture behavioral of allarme_casolingo at 14( 266) + 0 on 12;

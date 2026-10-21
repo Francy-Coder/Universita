@@ -49,8 +49,6 @@ Simboli utili nei percorsi relativi:
 | `rm <file>` | Elimina un file |
 | `rm -r <directory>` | Elimina una directory con il suo contenuto |
 
-> ⚠️ **Attenzione:** `rm` non usa il cestino, l'eliminazione è **definitiva**. Usa `rm -r` con cautela.
-
 ### Lettura e modifica
 
 | Comando | Descrizione |

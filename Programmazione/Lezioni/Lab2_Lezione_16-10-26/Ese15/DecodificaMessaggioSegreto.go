@@ -5,40 +5,31 @@ import "fmt"
 func main() {
 	var n int
 
-	fmt.Print("Inserisci un numero intero di 6 cifre: ")
+	fmt.Print("Messaggio codificato: ")
 	fmt.Scan(&n)
 
-	test := n % 10
-	fmt.Println(test)
+	// Estrarre i tre blocchi di due cifre usando divisione intera
+	// Da 768654 otteniamo: 76, 86, 54
 
-	test = n % 100
-	fmt.Print(test)
+	// Primo blocco (ultime 2 cifre, posizione 5-6 da destra)
+	blocco3 := n % 100
 
-	test = n % 1000
-	fmt.Println(test)
+	// Secondo blocco (cifre 3-4 da destra)
+	blocco2 := (n / 100) % 100
 
-	test = n % 10000
-	fmt.Println(test)
+	// Terzo blocco (cifre 1-2 da destra)
+	blocco1 := (n / 10000) % 100
 
-	test = n % 100000
-	fmt.Println(test)
+	// Invertire l'ordine dei blocchi
+	// blocco1=76, blocco2=86, blocco3=54
+	// Dopo inversione: 54, 86, 76
+	primo_originale := blocco3 - 10
+	secondo_originale := blocco2 - 10
+	terzo_originale := blocco1 - 10
 
-	fmt.Println("---------------------------------------------------")
-
-	test = n % 10
-	fmt.Println(test)
-
-	test = n / 100
-	fmt.Print(test)
-
-	test = n / 1000
-	fmt.Println(test)
-
-	test = n / 10000
-	fmt.Println(test)
-
-	test = n / 100000
-	fmt.Println(test)
+	fmt.Printf("Primo numero originale: %d\n", primo_originale)
+	fmt.Printf("Secondo numero originale: %d\n", secondo_originale)
+	fmt.Printf("Terzo numero originale: %d\n", terzo_originale)
 }
 
 /*	Numero Criptato:

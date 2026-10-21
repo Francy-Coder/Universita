@@ -1,85 +1,92 @@
 # Shell Linux
 
-La **shell** è l'interfaccia che permette all'utente di interagire con il sistema operativo tramite comandi testuali. La più diffusa su Linux è **Bash**, che useremo per eseguire e gestire i nostri programmi.
+La **shell** è l'interfaccia che permette di interagire con il sistema operativo tramite comandi testuali. Su Linux la più diffusa è **Bash**.
 
-## File System
+## 1. File system
 
-Il file system è il modo in cui il sistema operativo organizza e gestisce i file. Ha una **struttura gerarchica ad albero**, con la directory `/` (root) come radice.
+Il file system organizza i file in una **struttura gerarchica ad albero**, con la directory `/` (*root*) come radice.
 
-### Percorsi (path)
+### Percorsi
 
-- **Percorso assoluto**: parte sempre dalla root, quindi inizia con `/`
-  - `cd /home/utenti.unimi.it/nomeUtente/cartella`
-- **Percorso relativo**: parte dalla directory corrente, quindi non inizia con `/`
-  - `cd cartella/sottocartella`
+| Tipo | Regola | Esempio |
+|---|---|---|
+| **Assoluto** | Parte dalla root, inizia con `/` | `cd /home/utenti.unimi.it/nomeUtente/cartella` |
+| **Relativo** | Parte dalla directory corrente, non inizia con `/` | `cd cartella/sottocartella` |
+
+Simboli utili nei percorsi relativi:
+
+| Simbolo | Significato |
+|---|---|
+| `.` | Directory corrente |
+| `..` | Directory superiore (genitore) |
+| `../..` | Due livelli più in alto |
+
+> **Nomi di file e cartelle:** evita gli spazi. Se proprio servono, racchiudi il nome tra apici (`cd 'mia cartella'`). Meglio usare `nome_file` o `nomeFile`.
+
+## 2. Comandi di base
 
 ### Navigazione
 
 | Comando | Descrizione |
 |---|---|
-| `pwd` (*print working directory*) | Mostra la directory in cui ti trovi |
-| `ls` (*list*) | Elenca file e cartelle della directory corrente (`ls -l` per i dettagli, `ls -a` per includere i file nascosti) |
-| `cd <directory>` (*change directory*) | Si sposta nella directory indicata |
-| `cd .` | Resta nella directory corrente |
-| `cd ..` | Sale alla directory superiore (genitore) |
+| `pwd` | Mostra la directory corrente (*print working directory*) |
+| `ls` | Elenca file e cartelle (*list*) |
+| `ls -l` | Elenco dettagliato |
+| `ls -a` | Include i file nascosti |
+| `cd <directory>` | Si sposta nella directory indicata (*change directory*) |
+| `cd ..` | Sale alla directory superiore |
 | `cd /` | Va nella root |
-
-> **Attenzione ai nomi:** evitare spazi in nomi di file e cartelle. Se necessario, racchiudi il nome tra apici (`cd 'mia cartella'`). Meglio ancora usare `nome_file` o `nomeFile`.
 
 ### Gestione di file e directory
 
 | Comando | Descrizione |
 |---|---|
-| `touch <file>` | Crea un file vuoto (es. `touch file.txt`). |
+| `touch <file>` | Crea un file vuoto |
 | `mkdir <directory>` | Crea una directory |
 | `cp <origine> <destinazione>` | Copia un file |
-| `cp -r <origine> <destinazione>` | Copia una directory (e il suo contenuto) |
+| `cp -r <origine> <destinazione>` | Copia una directory con il suo contenuto |
 | `mv <origine> <destinazione>` | Sposta o rinomina file e directory |
 | `rm <file>` | Elimina un file |
-| `rm -r <directory>` | Elimina una directory e il suo contenuto |
+| `rm -r <directory>` | Elimina una directory con il suo contenuto |
 
-> `rm` **non** sposta i file nel cestino: l'eliminazione è definitiva. Usa `rm -r` con cautela.
-
-Con `mv` e `cp` puoi usare percorsi relativi: `../` risale di una directory, quindi `../../` risale di due.
-
-### Lettura e modifica dei file
+### Lettura e modifica
 
 | Comando | Descrizione |
 |---|---|
-| `cat <file>` | Stampa a schermo l'intero contenuto di un file di testo |
-| `more <file>` | Come `cat`, ma mostra il contenuto una schermata alla volta (utile per file lunghi) |
-| `pluma <file>` | Apre il file nell'editor di testo Pluma |
+| `cat <file>` | Stampa a schermo tutto il contenuto del file |
+| `more <file>` | Mostra il contenuto una schermata alla volta (utile per file lunghi) |
+| `pluma <file>` | Apre il file nell'editor Pluma |
 
-Finché Pluma è aperto, il terminale resta bloccato. Per evitarlo, avvialo in background aggiungendo `&`:
+Finché Pluma è aperto il terminale resta bloccato. Per evitarlo, avvialo in background con `&`:
+
 ```bash
 pluma <nome_file> &
 ```
 
 ### Esecuzione e documentazione
 
-- `./<file>`: esegue un file eseguibile presente nella directory corrente (deve avere il permesso di esecuzione, assegnabile con `chmod +x <file>`)
-- `man <comando>` (*manual*): mostra la documentazione di un comando; premi `q` per uscire
+| Comando | Descrizione |
+|---|---|
+| `./<file>` | Esegue un file nella directory corrente (serve il permesso di esecuzione) |
+| `chmod +x <file>` | Assegna il permesso di esecuzione |
+| `man <comando>` | Mostra il manuale del comando (*manual*); `q` per uscire |
 
 ---
 
-# Comandi Go
+# Go
+
+## 1. Comandi principali
 
 | Comando | Descrizione |
 |---|---|
-| `go fmt` | Formatta automaticamente il codice, applicando l'indentazione e lo stile standard di Go |
-| `go run <programma.go>` | Compila ed esegue il programma Go indicato |
-| `go build` | Compila il programma e genera un eseguibile |
-| `go doc <nome>` / `go help <comando>` | Mostrano la documentazione di un pacchetto, di una funzione o di un comando |
+| `go fmt` | Formatta il codice con indentazione e stile standard |
+| `go run <programma.go>` | Compila **ed esegue** il programma |
+| `go build` | Compila e genera un eseguibile |
+| `go doc <nome>` | Mostra la documentazione di un pacchetto o di una funzione |
+| `go help <comando>` | Mostra l'aiuto di un comando Go |
 
-## Moduli e pacchetti
+## 2. Moduli e pacchetti
 
-- **`go mod init <nome_modulo>`**: crea un nuovo modulo Go, generando il file `go.mod`. Il modulo tiene traccia del nome del progetto e delle librerie esterne da cui dipende, e permette di compilare il codice da qualsiasi cartella del computer.
-- **`main.go`**: è il nome convenzionale del file che contiene il punto di ingresso del programma. Deve dichiarare `package main` e contenere la funzione `main()`. Non è un comando: il file va creato (ad esempio con `touch main.go`).
-- **`fmt`**: pacchetto della *libreria standard* di Go (per input/output formattato), importabile direttamente con `import "fmt"`, senza bisogno di installarlo. Esistono anche pacchetti esterni, che si aggiungono al modulo.
-
-## Creare ed eseguire un eseguibile
-
-```bash
-go build -o <nome_eseguibile>   # compila e crea l'eseguibile con il nome scelto
-./<nome_eseguibile>             # esegue il programma
-```
+- **Modulo**: si crea con `go mod init <nome_modulo>`, che genera il file `go.mod`. Il modulo registra il nome del progetto e le librerie esterne da cui dipende, e permette di compilare il codice da qualsiasi cartella.
+- **`main.go`**: nome convenzionale del file con il punto di ingresso del programma. Deve dichiarare `package main` e contenere la funzione `main()`. Non è un comando: va creato (es. `touch main.go`).
+- **Pacchetti**: la *libreria standard* (come `fmt`, per l'input/output formattato) si importa direttamente con `import "fmt"`, senza installazione. I pacchetti esterni invece vanno aggiunti al modulo.

@@ -1,7 +1,3 @@
-Ecco una versione ristrutturata. Ho riorganizzato il materiale in un flusso più logico (dal concetto al comando, dal comando all'esempio), ho eliminato le ripetizioni, uniformato le tabelle e aggiunto due piccoli esempi pratici per fissare i concetti.
-
----
-
 # Shell Linux
 
 La **shell** è l'interfaccia che permette di interagire con il sistema operativo tramite comandi testuali. Su Linux la più diffusa è **Bash**.
@@ -77,17 +73,6 @@ pluma <nome_file> &
 | `chmod +x <file>` | Assegna il permesso di esecuzione |
 | `man <comando>` | Mostra il manuale del comando (*manual*); `q` per uscire |
 
-### Esempio riassuntivo
-
-```bash
-mkdir progetto          # crea la cartella
-cd progetto             # entra nella cartella
-touch note.txt          # crea un file vuoto
-cp note.txt copia.txt   # copia il file
-mv copia.txt ../        # sposta la copia nella directory superiore
-ls -l                   # controlla il contenuto
-```
-
 ---
 
 # Go
@@ -133,14 +118,3 @@ go run main.go              # prova il programma
 go build -o ciao            # crea l'eseguibile "ciao"
 ./ciao                      # lo esegue
 ```
-
----
-
-**Cosa ho cambiato, in breve:**
-- Numerato le sezioni e raggruppato i comandi in modo più coerente (ho unito `ls -l`/`ls -a` come righe separate per leggibilità).
-- Trasformato i percorsi e i simboli `.` / `..` in tabelle, così si confrontano a colpo d'occhio.
-- Spostato `chmod` e `./` insieme, perché vanno usati in coppia.
-- Aggiunto un esempio riassuntivo per la shell e un programma minimo per Go.
-- Chiuso Go con un flusso di lavoro completo, che collega tutti i comandi visti.
-
-Se vuoi, posso anche prepararlo come file `.md` o in versione più compatta, tipo schema o cheat sheet da stampare.

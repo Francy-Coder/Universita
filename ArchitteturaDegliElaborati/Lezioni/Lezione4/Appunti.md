@@ -1,4 +1,4 @@
-#Appunti
+# Appunti
 Con il comando:
 ```
 ghdl -a file.vhd
